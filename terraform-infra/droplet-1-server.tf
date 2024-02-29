@@ -10,13 +10,7 @@ resource "digitalocean_firewall" "droplet-1-firewall" {
 
   inbound_rule {
     protocol         = "tcp"
-    port_range       = "80"
-    source_addresses = ["0.0.0.0/0"]
-  }
-
-  inbound_rule {
-    protocol         = "tcp"
-    port_range       = "5044"
+    port_range       = "3000"
     source_addresses = ["0.0.0.0/0"]
   }
 
