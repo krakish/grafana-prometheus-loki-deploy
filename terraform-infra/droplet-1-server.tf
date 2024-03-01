@@ -28,9 +28,9 @@ resource "digitalocean_tag" "droplet-1-tag" {
 
 resource "digitalocean_droplet" "droplet-1" {
   image      = "ubuntu-22-04-x64"
-  name       = "graylog-server"
+  name       = "grafana-prometheus-loki"
   region     = "fra1"
-  size       = "s-2vcpu-4gb"
+  size       = "s-2vcpu-2gb"
   vpc_uuid   = resource.digitalocean_vpc.test-vpc.id
   ssh_keys   = [data.digitalocean_ssh_key.wind-key.id]
   user_data  = file("./server-user-data-docker.sh")
